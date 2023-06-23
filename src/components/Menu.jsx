@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Dropdown from "./Dropdown";
-import { FaCaretRight, FaCaretDown } from "react-icons/fa";
+// import { FaCaretRight, FaCaretDown } from "react-icons/fa";
+//import FaCaretRight from "@react-icons/all-files/fa/FaCaretRight";
+// import FaCaretDown from "@react-icons/all-files/fa/FaCaretDown";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const Menu = ({ items }) => {
   const [dropdown, setDropdown] = useState(false);
@@ -19,9 +23,9 @@ const Menu = ({ items }) => {
               {items.title}
 
               {dropdown ? (
-                <FaCaretDown className="mt-1" />
+                <FontAwesomeIcon icon={faCaretDown} className="mt-1 pl-1" />
               ) : (
-                <FaCaretRight className="mt-1" />
+                <FontAwesomeIcon icon={faCaretRight} className="mt-1 pl-1" />
               )}
             </div>
           </button>
